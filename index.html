@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santhera - Nutriție Smart & Sport</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --green-mint: #a8dadc;
+            --green-tea: #457b9d;
+            --blue-cyan: #1d3557;
+            --accent-green: #2a9d8f;
+            --light-bg: #f8f9fa;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        nav {
+            background: var(--white);
+            padding: 0.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 90%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .logo-container { display: flex; align-items: center; text-decoration: none; }
+        
+        /* Stil pentru logoul online */
+        .logo-img { 
+            height: 60px; 
+            width: auto; 
+            margin-right: 10px;
+            display: block;
+        }
+
+        .logo-text { font-weight: 700; font-size: 1.5rem; color: var(--accent-green); }
+
+        nav a { text-decoration: none; color: #333; margin-left: 20px; font-weight: 400; transition: 0.3s; }
+        nav a:hover { color: var(--accent-green); }
+
+        header {
+            height: 70vh;
+            background: linear-gradient(135deg, var(--green-mint) 0%, var(--green-tea) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            margin-top: 60px;
+        }
+
+        .btn {
+            background: var(--blue-cyan);
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        section { padding: 80px 10%; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 30px; }
+        
+        .card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            border-bottom: 5px solid var(--accent-green);
+        }
+        .price { font-size: 1.4rem; font-weight: bold; color: var(--blue-cyan); margin: 10px 0; }
+
+        .donation-alert {
+            background: #e9f5f2;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            text-align: center;
+            border-left: 5px solid var(--accent-green);
+        }
+
+        footer { 
+            background: var(--blue-cyan); 
+            color: white; 
+            padding: 60px 10%; 
+            text-align: center; 
+        }
+        footer h2 { color: var(--green-mint); margin-bottom: 20px; }
+        .social-link { color: var(--green-mint); text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="https://imgbb.com/"><img src="https://i.ibb.co/G4YbLxF1/santhera-logo-jpg.png" alt="santhera logo jpg" border="0"></a>
+            <span class="logo-text">SANTHERA</span>
+        </a>
+        <div>
+            <a href="#servicii">Servicii</a>
+            <a href="#preturi">Prețuri</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Nutriție smart, portofel împăcat, corp adaptat</h1>
+        <p>Aplicația ta pentru un stil de viață sănătos și accesibil.</p>
+        <a href="#preturi" class="btn">Vezi Oferta</a>
+    </header>
+
+    <section id="servicii">
+        <h2 style="text-align: center;">Servicii</h2>
+        <div class="grid">
+            <div class="card"><h3>Workout</h3><p>Acasă, Pilates, Tonifiere.</p></div>
+            <div class="card"><h3>Nutriție</h3><p>Planuri alimentare deștepte.</p></div>
+            <div class="card"><h3>AI Chat</h3><p>Suport instant 24/7.</p></div>
+        </div>
+    </section>
+
+    <section id="preturi" style="background: #f4f9f8;">
+        <h2 style="text-align: center;">Generări & Abonamente</h2>
+        <div class="grid">
+            <div class="card"><h3>5 Generări</h3><div class="price">40 LEI</div></div>
+            <div class="card"><h3>10 Generări</h3><div class="price">60 LEI</div></div>
+            <div class="card" style="border-color: var(--blue-cyan);">
+                <h3>25 Generări</h3>
+                <div class="price">80 LEI</div>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="card"><h3>STANDARD</h3><div class="price">110 LEI</div></div>
+            <div class="card"><h3>STANDARD+</h3><div class="price">150 LEI</div></div>
+            <div class="card" style="background: var(--blue-cyan); color: white;">
+                <h3 style="color: white;">PREMIUM</h3>
+                <div class="price" style="color: var(--green-mint);">250 LEI</div>
+            </div>
+        </div>
+
+        <div class="donation-alert">
+            <strong>❤️ Donație:</strong> 10% din fiecare abonament merge către o asociație caritabilă.
+        </div>
+    </section>
+
+    <footer id="contact">
+        <h2>Contactează-ne</h2>
+        <p><strong>Santhera SRL</strong></p>
+        <p>📍 Bd. Hristo Botev nr. 17, București</p>
+        <p>📞 021/313.90.82</p>
+        <p>✉️ santhera2025@gmail.com</p>
+        <br>
+        <p>Instagram: <a href="https://www.instagram.com/fe_santhera" class="social-link" target="_blank">@fe_santhera</a></p>
+    </footer>
+
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/64b52b57cc464a159058a98b/default';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+
+</body>
+</html>
